@@ -1,7 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Logo } from "@/icons/logo";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import RangeSlider from "@/components/rangeSlider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-background">
-      <body className={inter.className + "bg-background p-4"}>
-        <Logo />
+      <body className={inter.className + "bg-background min-h-screen"}>
+        {/* <Header /> */}
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );
