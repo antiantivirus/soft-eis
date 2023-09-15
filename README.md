@@ -1,6 +1,6 @@
 ## SOFT EIS
 
-SOFT EIS is an independent print magazine published in Berlin. Each issue deconstructs a different topic by exploring the dualities of ideas and all the conversations in between.
+SOFT EIS is an independent print magazine published in Berlin. Each issue deconstructs a different topic by pulling at its strings to examine the space between.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
