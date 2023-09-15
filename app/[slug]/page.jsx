@@ -6,8 +6,8 @@ export default async function Page({ params: { slug } }) {
     `*[_type == "page" && slug.current == "a-z"][0]`
   );
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <h1>{page.title}</h1>
+    <main className="">
+      <h1 className="text-center mb-16">{page.title}</h1>
       {page.body && <Content value={page.body} />}
     </main>
   );

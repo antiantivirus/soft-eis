@@ -3,11 +3,11 @@ import Content from "@/components/content";
 
 export default async function Magazine({ params: { slug } }) {
   const magazine = await client.fetch(
-    `*[_type == "magazine" && slug.current == "issue01-sex"][0]`
+    `*[_type == "magazine" && slug.current == "issue02-identity"][0]`
   );
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <h1>{magazine.title}</h1>
+    <main className="">
+      <h1 className="text-center mb-16">{magazine.title}</h1>
       {magazine.body && <Content value={magazine.body} />}
     </main>
   );
