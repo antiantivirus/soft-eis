@@ -1,10 +1,17 @@
 import Image from "next/image";
+import SlideTo from "@/components/slideTo";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <section className="">
-        <Image src="/issue03.jpg" alt="" width={300} height={380} />
-        <div className="h-8 w-full bg-primary">SLIDE TO PRE-ORDER</div>
+    <main className="grid place-items-center min-h-screen">
+      <section className="w-1/2">
+        <Image
+          priority={true}
+          src="/issue03.jpg"
+          alt=""
+          width={500}
+          height={800}
+        />
+        <SlideTo />
       </section>
     </main>
   );

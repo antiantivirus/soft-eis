@@ -6,7 +6,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav className="fixed top-1/2 left-2 transform -translate-y-1/2 mt-[9vw]">
       <ul>
         <li>
           <Link

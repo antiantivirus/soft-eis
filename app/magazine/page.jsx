@@ -11,13 +11,15 @@ export default async function Magazines() {
   return (
     <main>
       <section className="">
-        <h1 className="text-center mb-16">Magazine</h1>
+        <h1 className="text-center mb-16">MAGAZINE</h1>
         {magazines.map((magazine) => (
           <ul>
-            <li className="max-w-lg mx-auto mb-12">
+            <li className="max-w-lg mx-auto mb-14">
               <article>
                 <Link key={magazine._id} href="/magazine/issue02-identity">
-                  <p className="text-center">{magazine.title}</p>
+                  <span className="text-center text-medium block mb-6">
+                    {magazine.title}
+                  </span>
                   <SanityImage image={magazine.cover} />
                 </Link>
               </article>
