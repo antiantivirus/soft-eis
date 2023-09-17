@@ -18,10 +18,10 @@ const config: Config = {
         background: "#EBE4D3",
       },
       fontSize: {
-        tiny: ["1rem", 1],
-        base: ["1.2rem", 1.2666666667],
-        medium: ["2rem", 1.11111111],
-        large: ["4rem", 1.1111111111],
+        tiny: ["1rem", "1"],
+        base: ["1.2rem", "1.2666666667"],
+        medium: ["2rem", "1.11111111"],
+        large: ["4rem", "1.1111111111"],
       }
     },
   },

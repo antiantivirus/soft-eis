@@ -12,7 +12,7 @@ const uncut = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SOFTEIS Magazine",
+  title: "SOFT EIS Magazine",
   description: "",
 };
 

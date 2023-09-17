@@ -18,16 +18,29 @@ h1 {
   font-weight: 500;
 }
 
-h2,
 h3,
 h4,
 h5 {
-  font-size: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 p,
 li {
   font-size: 1.2rem;
+}
+
+hr {
+  @apply my-6 bg-black h-0.5;
+}
+
+a:hover {
+  letter-spacing: 0.3rem;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* shimmering text */
@@ -41,7 +54,7 @@ li {
     right top,
     from(#222),
     to(#222),
-    color-stop(0.9, #fff)
+    color-stop(0.5, #fff)
   );
   background: -moz-gradient(
     linear,
@@ -49,7 +62,7 @@ li {
     right top,
     from(#222),
     to(#222),
-    color-stop(0.9, #fff)
+    color-stop(0.5, #fff)
   );
   background: gradient(
     linear,
@@ -57,11 +70,11 @@ li {
     right top,
     from(#222),
     to(#222),
-    color-stop(0.9, #fff)
+    color-stop(0.5, #fff)
   );
   -webkit-background-size: 125px 100%;
   -moz-background-size: 125px 100%;
-  background-size: 25px 100%;
+  background-size: 40px 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;

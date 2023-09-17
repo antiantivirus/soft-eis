@@ -3,7 +3,7 @@ import Content from "@/components/content";
 
 export default async function Page({ params: { slug } }) {
   const page = await client.fetch(
-    `*[_type == "page" && slug.current == "a-z"][0]`
+    `*[_type == "page" && slug.current == "about"][0]`
   );
   return (
     <main className="">

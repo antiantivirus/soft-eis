@@ -32,7 +32,7 @@ export default function SlideTo() {
       >
         X
       </motion.div>
-      <span className="shimmer mx-auto px-6 font-medium text-[1.75rem]">
+      <span className="shimmer mx-auto px-7 font-medium text-[1.75rem]">
         SWIPE TO PRE-ORDER
       </span>
     </motion.div>
