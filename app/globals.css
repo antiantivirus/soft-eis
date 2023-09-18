@@ -35,7 +35,7 @@ li {
 }
 
 hr {
-  @apply my-6 bg-black h-0.5;
+  @apply my-6 border-black border-t;
 }
 
 a:hover,
@@ -62,6 +62,16 @@ img {
   @apply underline;
 }
 
+/* logo */
+
+.eis {
+  @apply right-2;
+}
+
+.soft {
+  @apply left-2;
+}
+
 /* keyframes */
 
 .fade-in {
@@ -78,6 +88,24 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fade-out {
+    animation-name: fade-out;
+    animation-duration: 0.2s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -239,12 +267,12 @@ img {
 }
 
 .snipcart__actions--link {
-  @apply text-primary;
+  @apply text-black;
 }
 
 .snipcart-cart-header__icon path,
 .snipcart-modal__close-icon path {
-  @apply fill-primary;
+  @apply fill-black;
 }
 
 .snipcart__icon--red path {

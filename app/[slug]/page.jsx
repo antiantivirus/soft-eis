@@ -6,10 +6,10 @@ export default async function Page({ params }) {
     `*[_type == "page" && slug.current == "${params.slug}"][0]`
   );
   return (
-    <main className="">
+    <div className="mb-48">
       <h1 className="text-center my-16">{page.title}</h1>
       {page.body && <Content value={page.body} />}
-    </main>
+    </div>
   );
 }
 

@@ -56,12 +56,12 @@ export const Logo = () => (
 
 export const SOFT = () => {
   return (
-    <div className="fixed top-1/2 left-[-30px]  lg:left-2 transform -translate-y-1/2 z-40">
+    <div className="fade-out fixed top-1/2 soft transform -translate-y-1/2 z-50 ">
       <motion.div
         initial={{ opacity: 1, scale: 2.6 }}
         animate={{ opacity: 1, scale: 1 }}
         style={{ originX: 0, originY: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.8, type: "spring" }}
+        transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
       >
         <svg
           width="100%"
@@ -94,12 +94,12 @@ export const SOFT = () => {
 
 export const EIS = () => {
   return (
-    <div className="fixed top-1/2 right-[-30px] lg:right-2 transform -translate-y-1/2 z-40">
+    <div className="fade-out fixed top-1/2 eis transform -translate-y-1/2 z-50">
       <motion.div
         initial={{ opacity: 1, scale: 2.6 }}
         animate={{ opacity: 1, scale: 1 }}
         style={{ originX: 1, originY: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.8, type: "spring" }}
+        transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
       >
         <svg
           width="100%"

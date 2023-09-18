@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
 
 export default function Navigation({ className }) {
   const pathname = usePathname();
@@ -37,7 +40,7 @@ export default function Navigation({ className }) {
       <nav
         className={`${
           pathname != "/"
-            ? "fixed top-1/2 left-4 transform -translate-y-1/2 mt-[10vw]"
+            ? "lg:fixed lg:top-1/2 lg:left-4 transform -translate-y-1/2 mt-[12vw] xl:mt-[11vw] 2xl:mt-[10vw]"
             : ""
         }`}
       >

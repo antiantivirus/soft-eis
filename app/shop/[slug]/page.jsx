@@ -7,7 +7,7 @@ export default async function Product({ params }) {
     `*[_type == "product" && slug.current == "${params.slug}"][0]`
   );
   return (
-    <main className="">
+    <div>
       <h1 className="text-center my-16">{product.title}</h1>
       <div className="max-w-md mx-auto mb-16">
         <SanityImage image={product.cover} />
@@ -27,7 +27,7 @@ export default async function Product({ params }) {
       </div>
 
       {product.body && <Content value={product.body} />}
-    </main>
+    </div>
   );
 }
 

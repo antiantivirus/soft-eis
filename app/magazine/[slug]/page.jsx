@@ -6,10 +6,10 @@ export default async function Magazine({ params }) {
     `*[_type == "magazine" && slug.current == "${params.slug}"][0]`
   );
   return (
-    <main className="">
+    <div>
       <h1 className="text-center my-16">{magazine.title}</h1>
       {magazine.body && <Content value={magazine.body} />}
-    </main>
+    </div>
   );
 }
 

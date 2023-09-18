@@ -1,8 +1,9 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { SOFT, EIS } from "../icons/logo";
+import { SOFT, EIS } from "../components/logo";
 import Navigation from "../components/navigation";
 import Link from "next/link";
+import MobileNavigation from "../components/mobileNavigation";
 
 const uncut = localFont({
   src: "./UncutSans-Variable.woff2",
@@ -18,17 +19,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
-      <body className={"bg-background p-4 flex"}>
-        <header className="w-1/4 relative">
+      <body className={"bg-background p-4 lg:flex"}>
+        <header className="lg:w-[26vw] lg:z-50">
           <Link href="/">
             <SOFT />
           </Link>
           <Navigation className="hidden lg:block fade-in" />
+          <MobileNavigation className="block lg:hidden" />
         </header>
-        <main className="grow fade-in">{children}</main>
-        <div className="w-1/6 relative">
+        <main className="grow lg:w-[58vw] fade-in">{children}</main>
+        <div className="lg:w-[16vw] lg:z-50">
           <EIS />
         </div>
+        <div
+          style={{
+            background:
+              "linear-gradient(0deg, #F6C859 0%, rgba(192, 192, 192, 0.00) 61.46%)",
+          }}
+          className="fixed bottom-0 left-0 w-screen h-[50vh] z-0 pointer-events-none"
+        ></div>
         <script
           dangerouslySetInnerHTML={{
             __html: `
