@@ -64,7 +64,7 @@ export const SOFT = () => {
         transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
       >
         <svg
-          width="100%"
+          width="auto"
           height="8vw"
           viewBox="0 0 417 156"
           fill="none"
@@ -102,7 +102,7 @@ export const EIS = () => {
         transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
       >
         <svg
-          width="100%"
+          width="auto"
           height="8vw"
           viewBox="0 0 261 156"
           fill="none"
