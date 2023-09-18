@@ -18,6 +18,10 @@ h1 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 h3,
 h4,
 h5 {
@@ -34,13 +38,24 @@ hr {
   @apply my-6 bg-black h-0.5;
 }
 
-a:hover {
+a:hover,
+button:hover {
   letter-spacing: 0.3rem;
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-a {
+a,
+button {
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.active-page {
+  letter-spacing: 0.3rem;
+}
+
+img {
+  height: auto;
+  max-height: 100%;
 }
 
 /* shimmering text */
@@ -72,9 +87,9 @@ a {
     to(#222),
     color-stop(0.5, #fff)
   );
-  -webkit-background-size: 125px 100%;
-  -moz-background-size: 125px 100%;
-  background-size: 40px 100%;
+  -webkit-background-size: 60px 100%;
+  -moz-background-size: 60px 100%;
+  background-size: 60px 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;

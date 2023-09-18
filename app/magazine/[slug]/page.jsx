@@ -1,13 +1,13 @@
 import client from "../../../client";
 import Content from "@/components/content";
 
-export default async function Magazine({ params: { slug } }) {
+export default async function Magazine({ params }) {
   const magazine = await client.fetch(
-    `*[_type == "magazine" && slug.current == "issue02-identity"][0]`
+    `*[_type == "magazine" && slug.current == "${params.slug}"][0]`
   );
   return (
     <main className="">
-      <h1 className="text-center mb-16">{magazine.title}</h1>
+      <h1 className="text-center my-16">{magazine.title}</h1>
       {magazine.body && <Content value={magazine.body} />}
     </main>
   );

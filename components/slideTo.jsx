@@ -5,8 +5,9 @@ import {
   useMotionValueEvent,
   useTransform,
 } from "framer-motion";
+import Image from "next/image";
 
-export default function SlideTo() {
+export default function SlideTo({ className }) {
   const x = useMotionValue(0);
   const background = useTransform(
     x,
@@ -22,7 +23,10 @@ export default function SlideTo() {
   });
 
   return (
-    <motion.div style={{ background }} className="flex gap-4 p-4">
+    <motion.div
+      style={{ background }}
+      className={"flex gap-4 p-4 " + className}
+    >
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
@@ -30,9 +34,15 @@ export default function SlideTo() {
         style={{ x }}
         className="cursor-grab"
       >
-        X
+        <Image
+          src="/star.png"
+          className="pointer-events-none	"
+          width={40}
+          height={40}
+          alt=""
+        />
       </motion.div>
-      <span className="shimmer mx-auto px-7 font-medium text-[1.75rem]">
+      <span className="shimmer mx-auto px-4 font-medium text-[1.7rem]">
         SWIPE TO PRE-ORDER
       </span>
     </motion.div>

@@ -56,7 +56,7 @@ export const Logo = () => (
 
 export const SOFT = () => {
   return (
-    <div className="fixed top-1/2 left-2 transform -translate-y-1/2">
+    <div className="fixed top-1/2 left-[-30px]  lg:left-2 transform -translate-y-1/2 z-40">
       <motion.div
         initial={{ opacity: 1, scale: 2.6 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -94,7 +94,7 @@ export const SOFT = () => {
 
 export const EIS = () => {
   return (
-    <div className="fixed top-1/2 right-2 transform -translate-y-1/2">
+    <div className="fixed top-1/2 right-[-30px] lg:right-2 transform -translate-y-1/2 z-40">
       <motion.div
         initial={{ opacity: 1, scale: 2.6 }}
         animate={{ opacity: 1, scale: 1 }}

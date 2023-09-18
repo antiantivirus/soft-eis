@@ -2,13 +2,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Navigation() {
+export default function Navigation({ className }) {
   const pathname = usePathname();
 
   return (
-    <div className={`${pathname == "/" && "mt-[65vh] mb-32"}`}>
+    <div
+      className={`${
+        pathname == "/" ? "lg:mt-[65vh] lg:mb-32 " : " "
+      }  ${className}`}
+    >
       {pathname == "/" && (
-        <div>
+        <div className="">
           <p>
             <b>SOFT EIS</b> is an independent print magazine published in
             Berlin. Each issue deconstructs a different topic by pulling at its
@@ -32,15 +36,16 @@ export default function Navigation() {
       )}
       <nav
         className={`${
-          pathname != "/" &&
-          "fixed top-1/2 left-2 transform -translate-y-1/2 mt-[9vw]"
+          pathname != "/"
+            ? "fixed top-1/2 left-4 transform -translate-y-1/2 mt-[10vw]"
+            : ""
         }`}
       >
         <ul>
           <li>
             <Link
               href="/about"
-              className={` ${pathname === "/about" ? "bg-primary" : ""}`}
+              className={` ${pathname === "/about" ? "active-page" : ""}`}
             >
               <span>About</span>
             </Link>
@@ -48,19 +53,25 @@ export default function Navigation() {
           <li>
             <Link
               href="/magazine"
-              className={` ${
-                pathname === "/magazine" ? "bg-primary" : "" + ""
-              }`}
+              className={` ${pathname === "/magazine" ? "active-page" : ""}`}
             >
               <span>Magazine</span>
             </Link>
           </li>
           <li>
             <Link
-              href="a-z"
-              className={` ${pathname === "/a-z" ? "bg-primary" : "" + ""}`}
+              href="/a-z"
+              className={` ${pathname === "/a-z" ? "active-page" : ""}`}
             >
               <span>A-Z</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/shop"
+              className={` ${pathname === "/shop" ? "active-page" : ""}`}
+            >
+              <span>Shop</span>
             </Link>
           </li>
           <li>

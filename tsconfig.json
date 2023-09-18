@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/magazine/[slug].jsx",
-    "pages/magazine/page.jsx"
+    "pages/magazine/page.jsx",
+    "app/shop/[slug].jsx",
+    "app/shop/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { SOFT, EIS } from "@/icons/logo";
 import Navigation from "../components/navigation";
 import Link from "next/link";
+import Script from "next/script";
 
 const uncut = localFont({
   src: "./UncutSans-Variable.woff2",
@@ -28,13 +29,14 @@ export default function RootLayout({
           <Link href="/">
             <SOFT />
           </Link>
-          <Navigation />
+          <Navigation className="hidden lg:block" />
         </header>
         <main className="grow">{children}</main>
         <div className="w-1/6 relative">
           <EIS />
         </div>
       </body>
+      <Script type="text/javascript" src="/snipcart.js"></Script>
     </html>
   );
 }

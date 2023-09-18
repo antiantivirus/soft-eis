@@ -11,12 +11,15 @@ export default async function Magazines() {
   return (
     <main>
       <section className="">
-        <h1 className="text-center mb-16">MAGAZINE</h1>
+        <h1 className="text-center my-16">MAGAZINE</h1>
         {magazines.map((magazine) => (
           <ul>
             <li className="max-w-lg mx-auto mb-14">
               <article>
-                <Link key={magazine._id} href="/magazine/issue02-identity">
+                <Link
+                  key={magazine._id}
+                  href={`/magazine/${magazine.slug.current}`}
+                >
                   <span className="text-center text-medium block mb-6">
                     {magazine.title}
                   </span>
