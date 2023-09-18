@@ -14,7 +14,7 @@ export default async function Product({ params }) {
         <div className="flex justify-between items-center">
           <p>€{product.price}</p>
           <button
-            className="Snipcart-add-item bg-primary py-2 px-6 rounded-full"
+            className="snipcart-add-item bg-primary py-2 px-6 rounded-full"
             data-item-id={product.sku}
             data-item-name={product.title}
             data-item-price={product.price}
