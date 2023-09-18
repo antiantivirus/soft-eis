@@ -12,8 +12,8 @@ export default async function Magazines() {
     <main>
       <section className="">
         <h1 className="text-center my-16">MAGAZINE</h1>
-        {magazines.map((magazine) => (
-          <ul>
+        <ul>
+          {magazines.map((magazine) => (
             <li key={magazine._id} className="max-w-lg mx-auto mb-14">
               <article>
                 <Link
@@ -27,8 +27,8 @@ export default async function Magazines() {
                 </Link>
               </article>
             </li>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </section>
     </main>
   );
