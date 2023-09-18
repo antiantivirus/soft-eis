@@ -3,6 +3,10 @@ import urlBuilder from "@sanity/image-url";
 import Link from "next/link";
 import SanityImage from "@/components/sanityImage";
 
+export const metadata = {
+  title: "Shop - SOFT EIS Magazine",
+};
+
 export default async function Magazines() {
   const products = await client.fetch(
     `

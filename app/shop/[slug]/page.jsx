@@ -7,6 +7,7 @@ export default async function Product({ params }) {
   const product = await client.fetch(
     `*[_type == "product" && slug.current == "${params.slug}"][0]`
   );
+
   return (
     <div className="mb-48">
       <h1 className="text-center my-16">{product.title}</h1>

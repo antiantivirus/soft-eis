@@ -2,6 +2,10 @@ import client from "../../client";
 import Link from "next/link";
 import SanityImage from "@/components/sanityImage";
 
+export const metadata = {
+  title: "Magazine - SOFT EIS Magazine",
+};
+
 export default async function Magazines() {
   const magazines = await client.fetch(
     `*[_type == "magazine"] | order(publishedAt desc)`
