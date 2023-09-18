@@ -6,7 +6,7 @@ import client from "../client";
 
 export default function PreOrder({ product }) {
   return (
-    <div className="w-full mt-20 mb-8 lg:mt-0 lg:mb-8 lg:fixed lg:max-w-[400px] lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-y-1/2 lg:-translate-x-1/2 lg:w-1/3 lg:z-10">
+    <div className="w-full mt-20 mb-8 lg:mt-0 lg:mb-8 lg:fixed max-w-[400px] mx-auto lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-y-1/2 lg:-translate-x-1/2 lg:w-1/3 lg:z-10">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

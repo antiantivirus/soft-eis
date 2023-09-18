@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import AddToCart from "./addToCart";
 
 export default function Navigation({ className }) {
   const pathname = usePathname();
@@ -78,7 +79,7 @@ export default function Navigation({ className }) {
             </Link>
           </li>
           <li>
-            <button class="snipcart-checkout" id="checkout">
+            <button className="snipcart-checkout" id="checkout">
               <span>Checkout</span>
             </button>
           </li>
@@ -89,6 +90,9 @@ export default function Navigation({ className }) {
           </li>
         </ul>
       </nav>
+      <div className="fixed top-4 right-4">
+        <AddToCart />
+      </div>
     </div>
   );
 }

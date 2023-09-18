@@ -12,12 +12,6 @@ export default async function Home() {
     <main className="grid place-items-center min-h-screen">
       <section>
         <PreOrder product={product} />
-        {/* <Link
-          href="shop/issue03"
-          className="text-secoondary p-5 rounded-full mx-auto lg:-ml-10 lg:fixed lg:bottom-[180px] lg:right-24 lg:block z-30 rotate-12 origin-center border-black border"
-        >
-          FIND OUT MORE
-        </Link> */}
         <Link
           href="/shop/issue03"
           className="enlarge mb-16 lg:mb-0 block lg:fixed lg:bottom-[15%] lg:right-[18%] lg:z-10 h-full lg:h-auto"

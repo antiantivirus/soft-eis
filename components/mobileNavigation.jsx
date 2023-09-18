@@ -3,6 +3,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import Image from "next/image";
+import AddToCart from "./addToCart";
 
 export default function MobileNavigation({ className }) {
   const pathname = usePathname();
@@ -13,18 +15,23 @@ export default function MobileNavigation({ className }) {
 
   if (pathname != "/")
     return (
-      <div className="fade-in">
+      <div className="block lg:hidden fade-in">
         <Dialog.Root open={open} onOpenChange={setOpen}>
-          <div className="flex justify-between">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="grow">
+              <Image src="/logo.svg" height={50} width={120} alt="" />
+              <span className="sr-only">Home</span>
+            </Link>
             <Dialog.Trigger asChild>
-              <button className="lg:hidden text-medium grow">MENU</button>
+              <button className="lg:hidden text-medium">MENU</button>
             </Dialog.Trigger>
+            <AddToCart />
           </div>
           <Dialog.Portal>
             <Dialog.Content className="bg-primary fixed top-0 left-0 pt-5 px-4 w-screen h-screen z-50">
               <nav className="relative">
                 <Dialog.Close asChild>
-                  <button className="mx-auto block lg:hidden text-medium">
+                  <button className="mr-8 ml-auto block text-medium lg:hidden tracking-widest">
                     CLOSE
                   </button>
                 </Dialog.Close>
@@ -70,7 +77,13 @@ export default function MobileNavigation({ className }) {
                     </Link>
                   </li>
                   <li>
-                    <button class="snipcart-checkout" id="checkout">
+                    <button
+                      onClick={() => {
+                        setOpen(false);
+                      }}
+                      className="snipcart-checkout text-medium"
+                      id="checkout"
+                    >
                       <span>Checkout</span>
                     </button>
                   </li>

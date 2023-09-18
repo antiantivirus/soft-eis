@@ -34,6 +34,23 @@ export default async function Product({ params }) {
       </div>
 
       {product.body && <Content value={product.body} />}
+
+      <button
+        className="snipcart-add-item bg-primary text-medium my-8 mx-auto py-2 px-6 rounded-full"
+        data-item-id={product.sku}
+        data-item-name={product.title}
+        data-item-price={product.price}
+        data-item-description={product.shortDescription}
+        data-item-url={`/shop/${product.slug.current}`}
+        data-item-image={urlBuilder(client)
+          .image(product.cover)
+          .width(200)
+          .fit("max")
+          .auto("format")
+          .url()}
+      >
+        Add to cart
+      </button>
     </div>
   );
 }
