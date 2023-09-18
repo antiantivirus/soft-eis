@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
       <Head>
-        <meta property="og:image" content="/softeis-social.png" />
+        <meta property="og:image" content="/softeis-social.jpg" />
       </Head>
       <body className={"bg-background p-4 lg:flex"}>
         <header className="lg:w-[26vw]">
