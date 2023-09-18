@@ -16,10 +16,13 @@ export default async function Magazines() {
           {products.map((product) => (
             <li key={product._id} className="max-w-lg mx-auto mb-14">
               <article>
-                <span className="text-center text-medium block mb-6">
-                  {product.title}
-                </span>
-                <SanityImage image={product.cover} />
+                <Link href={`/shop/${product.slug.current}`}>
+                  <span className="text-center text-medium block mb-6">
+                    {product.title}
+                  </span>
+                  <SanityImage image={product.cover} />
+                </Link>
+
                 <div className="flex justify-between items-center">
                   <p>€{product.price}</p>
                   <button
