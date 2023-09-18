@@ -1,4 +1,5 @@
 import client from "../../../client";
+import urlBuilder from "@sanity/image-url";
 import Content from "@/components/content";
 import SanityImage from "@/components/sanityImage";
 
@@ -7,7 +8,7 @@ export default async function Product({ params }) {
     `*[_type == "product" && slug.current == "${params.slug}"][0]`
   );
   return (
-    <div>
+    <div className="mb-48">
       <h1 className="text-center my-16">{product.title}</h1>
       <div className="max-w-md mx-auto mb-16">
         <SanityImage image={product.cover} />
@@ -20,6 +21,12 @@ export default async function Product({ params }) {
             data-item-price={product.price}
             data-item-description={product.shortDescription}
             data-item-url={`/shop/${product.slug.current}`}
+            data-item-image={urlBuilder(client)
+              .image(product.cover)
+              .width(200)
+              .fit("max")
+              .auto("format")
+              .url()}
           >
             Add to cart
           </button>

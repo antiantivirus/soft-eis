@@ -1,15 +1,16 @@
 import client from "../../client";
+import urlBuilder from "@sanity/image-url";
 import Link from "next/link";
 import SanityImage from "@/components/sanityImage";
 
 export default async function Magazines() {
   const products = await client.fetch(
     `
-    *[_type == "product"]
+    *[_type == "product"] | order(publishedAt desc)
   `
   );
   return (
-    <section>
+    <section className="mb-48">
       <h1 className="text-center my-16">SHOP</h1>
       <ul className="">
         {products.map((product) => (
@@ -30,6 +31,12 @@ export default async function Magazines() {
                   data-item-name={product.title}
                   data-item-price={product.price}
                   data-item-description={product.shortDescription}
+                  data-item-image={urlBuilder(client)
+                    .image(product.cover)
+                    .width(200)
+                    .fit("max")
+                    .auto("format")
+                    .url()}
                 >
                   Add to cart
                 </button>

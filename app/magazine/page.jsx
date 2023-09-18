@@ -4,12 +4,10 @@ import SanityImage from "@/components/sanityImage";
 
 export default async function Magazines() {
   const magazines = await client.fetch(
-    `
-    *[_type == "magazine"]
-  `
+    `*[_type == "magazine"] | order(publishedAt desc)`
   );
   return (
-    <section className="">
+    <section className="mb-48">
       <h1 className="text-center my-16">MAGAZINE</h1>
       <ul>
         {magazines.map((magazine) => (

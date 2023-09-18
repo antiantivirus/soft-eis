@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
       <body className={"bg-background p-4 lg:flex"}>
-        <header className="lg:w-[26vw] lg:z-50">
+        <header className="lg:w-[26vw]">
           <Link href="/">
             <SOFT />
           </Link>
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           <MobileNavigation className="block lg:hidden" />
         </header>
         <main className="grow lg:w-[58vw] fade-in">{children}</main>
-        <div className="lg:w-[16vw] lg:z-50">
+        <div className="lg:w-[16vw]">
           <EIS />
         </div>
         <div
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
             background:
               "linear-gradient(0deg, #F6C859 0%, rgba(192, 192, 192, 0.00) 61.46%)",
           }}
-          className="fixed bottom-0 left-0 w-screen h-[50vh] z-0 pointer-events-none"
+          className="fixed bottom-0 left-0 w-screen h-[30vh] z-0 pointer-events-none"
         ></div>
         <script
           dangerouslySetInnerHTML={{

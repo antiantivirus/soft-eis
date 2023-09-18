@@ -33,15 +33,7 @@ export default function SlideTo({ className }) {
         dragElastic={0.9}
         style={{ x }}
         className="cursor-grab"
-      >
-        <Image
-          src="/star.png"
-          className="pointer-events-none	"
-          width={40}
-          height={40}
-          alt=""
-        />
-      </motion.div>
+      ></motion.div>
       <span className="shimmer mx-auto px-4 font-medium text-[1.7rem]">
         SWIPE TO PRE-ORDER
       </span>
