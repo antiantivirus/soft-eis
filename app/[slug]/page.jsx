@@ -16,7 +16,7 @@ export default async function Page({ params }) {
 export async function generateStaticParams() {
   const pages = await client.fetch(
     `*[_type == "page" && defined(slug.current)][]{
-      "params": { "slug": slug.current }
+      "slug": slug.current
     }`
   );
 

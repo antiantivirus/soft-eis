@@ -59,7 +59,7 @@ export default async function Product({ params }) {
 export async function generateStaticParams() {
   const products = await client.fetch(
     `*[_type == "product" && defined(slug.current)][]{
-      "params": { "slug": slug.current }
+      "slug": slug.current
     }`
   );
 

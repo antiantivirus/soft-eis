@@ -16,7 +16,7 @@ export default async function Magazine({ params }) {
 export async function generateStaticParams() {
   const magazines = await client.fetch(
     `*[_type == "magazine" && defined(slug.current)][]{
-      "params": { "slug": slug.current }
+      "slug": slug.current
     }`
   );
 
