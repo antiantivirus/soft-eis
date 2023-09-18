@@ -11,7 +11,7 @@ export default function PreOrder({ product }) {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         style={{ originX: 0.5, originY: 0.5 }}
-        transition={{ duration: 0.7, delay: 0.85, type: "spring" }}
+        transition={{ duration: 0.8, delay: 0.85, type: "spring" }}
       >
         <Image
           priority={true}
