@@ -70,9 +70,9 @@ export default function MobileNavigation({ className }) {
                     </Link>
                   </li>
                   <li>
-                    <Link href="" className="text-medium">
+                    <button class="snipcart-checkout" id="checkout">
                       <span>Checkout</span>
-                    </Link>
+                    </button>
                   </li>
                   <li>
                     <Link href="/impressum" className="text-medium">

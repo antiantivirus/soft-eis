@@ -78,9 +78,9 @@ export default function Navigation({ className }) {
             </Link>
           </li>
           <li>
-            <Link href="">
+            <button class="snipcart-checkout" id="checkout">
               <span>Checkout</span>
-            </Link>
+            </button>
           </li>
           <li>
             <Link href="/impressum">
