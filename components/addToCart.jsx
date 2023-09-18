@@ -1,6 +1,6 @@
 export default function AddToCart() {
   return (
-    <button className="snipcart-checkout text-right" id="checkout">
+    <button className="snipcart-checkout text-right enlarge" id="checkout">
       <svg
         stroke="currentColor"
         fill="currentColor"
