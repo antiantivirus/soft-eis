@@ -58,6 +58,29 @@ img {
   max-height: 100%;
 }
 
+.prose a {
+  @apply underline;
+}
+
+/* keyframes */
+
+.fade-in {
+  @apply opacity-0;
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* shimmering text */
 
 .shimmer {
@@ -158,4 +181,85 @@ img {
   100% {
     background-position: top right;
   }
+}
+
+/* snipcart */
+
+/* snipcart css */
+
+.snipcart-overwrite #snipcart-main-container span.snipcart-unit-price,
+.snipcart-overwrite #snipcart-main-container span.snipcart-total-price,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-product-name,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-shipping-method-name,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-shipping-method-price,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-confirm-item-quantity,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-confirm-item-price,
+.snipcart-overwrite
+  #snipcart-main-container
+  table.snipcart-list
+  span.snipcart-confirm-item-total-price,
+.snipcart-overwrite #snipcart-main-container label,
+.snipcart-overwrite ul#snipcart-steps li span.snipcart-step-text,
+.snipcart-overwrite #snipcart-main-container table.snipcart-list th,
+.snipcart-overwrite #snipcart-main-content .snipcart-column span.snipcart-title,
+.snipcart-overwrite table#snipcart-confirm-prices tr td span,
+.snipcart-overwrite
+  #snipcart-main-container
+  .snipcart-full-width-text
+  span.snipcart-title,
+.snipcart-overwrite #snipcart-main-container .snipcart-full-width-text,
+.snipcart-overwrite
+  #snipcart-step-content-emptycart
+  .snipcart-full-width-text
+  p,
+.snipcart-overwrite #snipcart-blocked .snipcart-full-width-text p,
+.snipcart-overwrite #snipcart-header #snipcart-total span,
+.snipcart-overwrite #snipcart-header #snipcart-title {
+  font-family: "uncut", sans-serif;
+}
+
+.snipcart-cart-button--highlight,
+.snipcart__box--badge-highlight {
+  @apply bg-primary text-black;
+}
+
+.snipcart__actions--link {
+  @apply text-primary;
+}
+
+.snipcart-cart-header__icon path,
+.snipcart-modal__close-icon path {
+  @apply fill-primary;
+}
+
+.snipcart__icon--red path {
+  /* fill: #e2bad2; */
+}
+
+.snipcart-checkout {
+  cursor: pointer;
+}
+
+.snipcart-base-button {
+  @apply bg-primary rounded-full text-black;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.snipcart-base-button:hover {
+  @apply bg-primary shadow-none text-black;
 }

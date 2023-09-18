@@ -14,7 +14,7 @@ const components = {
   },
   block: {
     normal: ({ children }) => (
-      <p className="max-w-prose w-full my-4 mx-auto">{children}</p>
+      <p className="prose max-w-prose w-full my-4 mx-auto">{children}</p>
     ),
   },
 };
