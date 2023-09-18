@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { SOFT, EIS } from "../icons/logo";
 import Navigation from "../components/navigation";
 import Link from "next/link";
+import Head from "next/head";
 import Snipcart from "../components/snipcart";
 
 const uncut = localFont({
