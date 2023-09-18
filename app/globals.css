@@ -84,7 +84,7 @@ img {
   @apply opacity-0;
   animation-name: fade-in;
   animation-duration: 0.3s;
-  animation-delay: 1.3s;
+  animation-delay: 1.1s;
   animation-fill-mode: forwards;
 }
 
