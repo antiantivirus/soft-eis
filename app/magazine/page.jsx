@@ -14,7 +14,7 @@ export default async function Magazines() {
         <h1 className="text-center my-16">MAGAZINE</h1>
         {magazines.map((magazine) => (
           <ul>
-            <li className="max-w-lg mx-auto mb-14">
+            <li key={magazine._id} className="max-w-lg mx-auto mb-14">
               <article>
                 <Link
                   key={magazine._id}

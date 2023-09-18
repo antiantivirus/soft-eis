@@ -14,7 +14,7 @@ export default async function Magazines() {
         <h1 className="text-center my-16">SHOP</h1>
         <ul className="">
           {products.map((product) => (
-            <li className="max-w-lg mx-auto mb-14">
+            <li key={product._id} className="max-w-lg mx-auto mb-14">
               <article>
                 <span className="text-center text-medium block mb-6">
                   {product.title}
