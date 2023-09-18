@@ -19,6 +19,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
+      <Head>
+        <link rel="preconnect" href="https://app.snipcart.com" />
+        <link rel="preconnect" href="https://cdn.snipcart.com" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css"
+        />
+        <script
+          async
+          defer
+          src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"
+        ></script>
+        <div
+          hidden
+          id="snipcart"
+          data-api-key="YTQwNzE2YjAtNjlmZC00YmUzLTkwYjAtZWU4ZmM1OTY0Y2QxNjM3NDM2MzQxNjA0NDQ5MjA5"
+        ></div>
+      </Head>
       <body className={"bg-background p-4 flex"}>
         <header className="w-1/4 relative">
           <Link href="/">
@@ -31,7 +49,6 @@ export default function RootLayout({ children }) {
           <EIS />
         </div>
       </body>
-      <Snipcart />
     </html>
   );
 }
