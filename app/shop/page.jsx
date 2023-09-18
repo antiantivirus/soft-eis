@@ -16,7 +16,7 @@ export default async function Magazines() {
   return (
     <section className="mb-48">
       <h1 className="text-center my-16">SHOP</h1>
-      <ul className="">
+      <ul className=" grid grid-cols-2 gap-16 xl:gap-28">
         {products.map((product) => (
           <li key={product._id} className="max-w-lg mx-auto mb-14">
             <article>
