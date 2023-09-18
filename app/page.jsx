@@ -18,6 +18,19 @@ export default async function Home() {
         >
           FIND OUT MORE
         </Link> */}
+        <Link
+          href="/shop/issue03"
+          className="enlarge mb-16 lg:mb-0 block lg:fixed lg:bottom-[15%] lg:right-[18%] lg:z-10 h-full lg:h-auto"
+        >
+          <Image
+            className="mx-auto"
+            src="/find-out-more.png"
+            width={120}
+            height={180}
+            alt="Find out more"
+          />
+        </Link>
+
         <div className="hidden justify-between items-center lg:block my-8">
           <Image
             className="lg:fixed top-10 left-10 lg:z-10 h-full lg:h-auto"
@@ -27,17 +40,10 @@ export default async function Home() {
             alt=""
           />
           <Image
-            className="lg:fixed top-[25%] left-[18%] lg:z-10 h-full lg:h-auto"
+            className="lg:fixed top-[10%] right-[8%] lg:z-10 h-full lg:h-auto"
             src="/sad-apple.png"
             width={50}
             height={50}
-            alt=""
-          />
-          <Image
-            className="lg:fixed top-[8%] right-[10%] lg:z-10 h-full lg:h-auto"
-            src="/keychain.png"
-            width={90}
-            height={140}
             alt=""
           />
         </div>
