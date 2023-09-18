@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `
             window.SnipcartSettings = {
-                publicApiKey: "YTQwNzE2YjAtNjlmZC00YmUzLTkwYjAtZWU4ZmM1OTY0Y2QxNjM3NDM2MzQxNjA0NDQ5MjA5",
+                publicApiKey: "M2UyMjA4ZjAtN2Q3OC00OTVhLWIyZTEtODZmOTUwNmIzMTBhNjM3NDM2MzQxNjA0NDQ5MjA5",
                 loadStrategy: "on-user-interaction",
                 modalStyle: "side",
             };
