@@ -1,10 +1,9 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { SOFT, EIS } from "@/icons/logo";
+import { SOFT, EIS } from "../icons/logo";
 import Navigation from "../components/navigation";
 import Link from "next/link";
-import Script from "next/script";
+import Snipcart from "../components/snipcart";
 
 const uncut = localFont({
   src: "./UncutSans-Variable.woff2",
@@ -12,16 +11,12 @@ const uncut = localFont({
   variable: "--font-uncut",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "SOFT EIS Magazine",
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
       <body className={"bg-background p-4 flex"}>
@@ -36,7 +31,7 @@ export default function RootLayout({
           <EIS />
         </div>
       </body>
-      <Script type="text/javascript" src="/snipcart.js"></Script>
+      <Snipcart />
     </html>
   );
 }
