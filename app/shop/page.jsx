@@ -25,7 +25,6 @@ export default async function Magazines() {
                   <button
                     className="Snipcart-add-item bg-primary py-2 px-6 rounded-full"
                     data-item-id={product.sku}
-                    data-item-image={product.cover}
                     data-item-name={product.title}
                     data-item-price={product.price}
                     data-item-description={product.shortDescription}
