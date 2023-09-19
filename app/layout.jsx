@@ -4,7 +4,6 @@ import { SOFT, EIS } from "../components/logo";
 import Navigation from "../components/navigation";
 import Link from "next/link";
 import MobileNavigation from "../components/mobileNavigation";
-import Head from "next/head";
 
 const uncut = localFont({
   src: "./UncutSans-Variable.woff2",
@@ -16,17 +15,14 @@ export const metadata = {
   title: "SOFT EIS Magazine",
   description:
     "SOFT EIS is an independent print magazine published in Berlin. Each issue deconstructs a different topic by pulling at its strings to examine the space between.",
+  openGraph: {
+    images: "/softeis-social.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={uncut.className + " bg-background"}>
-      <Head>
-        <meta
-          property="og:image"
-          content="https://www.softeismagazine.com/softeis-social.jpg"
-        />
-      </Head>
       <body className={"bg-background p-4 lg:flex"}>
         <header className="lg:w-[26vw]">
           <Link href="/">
