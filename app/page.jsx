@@ -14,7 +14,7 @@ export default async function Home() {
         <PreOrder product={product} />
         <Link
           href="/shop/issue03"
-          className="enlarge mb-16 lg:mb-0 block lg:fixed lg:bottom-[15%] lg:right-[18%] lg:z-10 h-full lg:h-auto"
+          className="enlarge mb-16 lg:mb-0 block w-max mx-auto lg:fixed lg:bottom-[15%] lg:right-[18%] lg:z-10 h-full lg:h-auto"
         >
           <Image
             className="mx-auto"
