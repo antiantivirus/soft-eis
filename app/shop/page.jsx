@@ -35,6 +35,7 @@ export default async function Magazines() {
                   data-item-name={product.title}
                   data-item-price={product.price}
                   data-item-description={product.shortDescription}
+                  data-item-weight={product.weight}
                   data-item-image={urlBuilder(client)
                     .image(product.cover)
                     .width(200)

@@ -22,6 +22,7 @@ export default async function Product({ params }) {
             data-item-price={product.price}
             data-item-description={product.shortDescription}
             data-item-url={`/shop/${product.slug.current}`}
+            data-item-weight={product.weight}
             data-item-image={urlBuilder(client)
               .image(product.cover)
               .width(200)
@@ -43,6 +44,7 @@ export default async function Product({ params }) {
         data-item-price={product.price}
         data-item-description={product.shortDescription}
         data-item-url={`/shop/${product.slug.current}`}
+        data-item-weight={product.weight}
         data-item-image={urlBuilder(client)
           .image(product.cover)
           .width(200)
