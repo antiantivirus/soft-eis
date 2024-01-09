@@ -36,7 +36,7 @@ export default function PreOrder({ product }) {
             .auto("format")
             .url()}
         >
-          <span className="shimmer py-2 block">PRE-ORDER ISSUE03 NOW</span>
+          <span className="shimmer py-2 block">ORDER ISSUE03 NOW</span>
           <Image
             className="absolute left-0 lg:left-[-20px] bottom-[-20px] lg:z-10 w-auto"
             src="/star-fish.png"
